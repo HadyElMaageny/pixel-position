@@ -1,26 +1,43 @@
 <x-layout>
-    <section>
-        <h3>
-            Top Jobs
-        </h3>
+    <div class="space-y-10">
+        <section class="text-center pt-6">
+            <h1 class="text-4xl font-bold">Find Your Dream Job</h1>
+            <form action="" class="mt-6">
+                <input type="text" placeholder="Search for jobs"
+                    class="w-full bg-white/5 border-white/10 px-5 py-4 rounded-xl max-w-xl">
+            </form>
+        </section>
 
-        <div class="p-4 bg-red-500">
-            <div>
-                <div>Laracasts</div>
-                <div>
-                    <h3>Video Producer</h3>
-                    <p>Full Time - From $60,000</p>
-                </div>
-                <div>
-                    <div>
-                        <a href="">Tag</a>
-                        <a href="">Tag</a>
-                        <a href="">Tag</a>
-                    </div>
+        <section class="pt-10">
+            <x-section-heading>Featured Jobs</x-section-heading>
 
-                    <img src="http://placehold.it/42/42" alt="">
-                </div>
+            <div class="grid lg:grid-cols-3 gap-8 mt-6">
+                <x-job-card />
+                <x-job-card />
+                <x-job-card />
             </div>
+        </section>
+
+        <section>
+            <x-section-heading>Tags</x-section-heading>
+
+            <div class="mt-6 space-x-1">
+                <x-tag>Tag</x-tag>
+                <x-tag>Tag</x-tag>
+                <x-tag>Tag</x-tag>
+                <x-tag>Tag</x-tag>
+                <x-tag>Tag</x-tag>
+            </div>
+        </section>
+
+        <section>
+            <x-section-heading>Recent Jobs</x-section-heading>
+        </section>
+
+        <div class="mt-6 space-y-6">
+            <x-job-card-wide />
+            <x-job-card-wide />
+            <x-job-card-wide />
         </div>
-    </section>
+    </div>
 </x-layout>
