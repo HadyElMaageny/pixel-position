@@ -24,7 +24,7 @@
         <section>
             <x-section-heading>Tags</x-section-heading>
 
-            <div class="mt-6 space-x-1">
+            <div class="mt-6 flex flex-wrap gap-y-2 gap-x-2">
                 @foreach($tags as $tag)
                     <x-tag :$tag/>
                 @endforeach
@@ -33,12 +33,12 @@
 
         <section>
             <x-section-heading>Recent Jobs</x-section-heading>
-        </section>
 
-        <div class="mt-6 space-y-6">
-            @foreach($jobs as $job)
-                <x-job-card-wide :job="$job" />
-            @endforeach
-        </div>
+            <div class="mt-6 space-y-6">
+                @foreach($jobs as $job)
+                    <x-job-card-wide :job="$job" />
+                @endforeach
+            </div>
+        </section>
     </div>
 </x-layout>
