@@ -16,10 +16,10 @@ Route::get('/tags/{tag:name}', TagController::class)->name('tags.show');
 
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('register', [RegisteredUserController::class, 'create'])->name('register.create');
-    Route::post('register', [RegisteredUserController::class, 'store'])->name('register.store');
+    Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+    Route::post('register', [RegisteredUserController::class, 'store'])->name('register');
 
-    Route::get('login', [SessionController::class, 'create'])->name('login.create');
-    Route::post('login', [SessionController::class, 'store'])->name('login.store');
+    Route::get('login', [SessionController::class, 'create'])->name('login');
+    Route::post('login', [SessionController::class, 'store'])->name('login');
 });
 Route::delete('logout', [SessionController::class, 'destroy'])->middleware('auth')->name('logout');
